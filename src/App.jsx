@@ -12,28 +12,28 @@ import { Footer } from './components/footer/Footer'
 
 
 export default function App() {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState('');
+  const [activeNav, setActiveNav] = useState('#')
 
-  function ActiveHandler() {
-    setActive(true)
+  function ActiveHandler(id) {
+    setActive(id)
+    setActiveNav('')
   }
   function InActiveHandler() {
-    setActive(false)
+    setActive('')
   }
 
-  function ActiveClickHandler() {
-    setActive(true)
-  }
+
   return (
     <>
-      <Header />
-      <Nav active={active} OnClick={ActiveClickHandler} />
-      <About OnSetActive={ActiveHandler} OnSetInActiveHandler={InActiveHandler} />
-      <Experience />
-      <Services />
-      <Portfolio />
-      <Testimonials />
-      <Contact />
+      <Header OnSetActiveHandler={ActiveHandler} OnSetInActiveHandler={InActiveHandler} />
+      <Nav active={active} OnClick={ActiveHandler} activeNav={activeNav} setActiveNav={setActiveNav} />
+      <About OnSetActiveHandler={ActiveHandler} OnSetInActiveHandler={InActiveHandler} />
+      <Experience OnSetActiveHandler={ActiveHandler} OnSetInActiveHandler={InActiveHandler} />
+      <Services OnSetActiveHandler={ActiveHandler} OnSetInActiveHandler={InActiveHandler} />
+      <Portfolio OnSetActiveHandler={ActiveHandler} OnSetInActiveHandler={InActiveHandler} />
+      <Testimonials OnSetActiveHandler={ActiveHandler} OnSetInActiveHandler={InActiveHandler} />
+      <Contact OnSetActiveHandler={ActiveHandler} OnSetInActiveHandler={InActiveHandler} />
       <Footer />
     </>
   )

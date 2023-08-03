@@ -2,9 +2,9 @@ import React from 'react'
 import './services.css'
 import { BiCheck } from 'react-icons/bi'
 
-export const Services = () => {
+export const Services = ({ OnSetActiveHandler, OnSetInActiveHandler }) => {
   return (
-    <section id='services'>
+    <section id='services' onMouseEnter={() => OnSetActiveHandler('#services')} onMouseLeave={OnSetInActiveHandler}>
       <h5>What I Offer</h5>
       <h2>Services</h2>
 

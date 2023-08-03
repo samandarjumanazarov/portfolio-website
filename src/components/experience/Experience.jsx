@@ -3,9 +3,9 @@ import './experience.css'
 import { BsPatchCheckFill } from 'react-icons/bs'
 
 
-export const Experience = () => {
+export const Experience = ({ OnSetActiveHandler, OnSetInActiveHandler }) => {
   return (
-    <section id='experience'>
+    <section id='experience' onMouseEnter={() => OnSetActiveHandler('#experience')} onMouseLeave={OnSetInActiveHandler}>
       <h5>What Skills I Have</h5>
       <h2>My Experience</h2>
 

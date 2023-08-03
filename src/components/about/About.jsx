@@ -5,9 +5,9 @@ import { FaAward } from 'react-icons/fa'
 import { FiUsers } from 'react-icons/fi'
 import { VscFolderLibrary } from 'react-icons/vsc'
 
-export default function About({ OnSetActive, OnSetInActiveHandler }) {
+export default function About({ OnSetActiveHandler, OnSetInActiveHandler }) {
   return (
-    <section id='about' onMouseEnter={OnSetActive} onMouseLeave={OnSetInActiveHandler}>
+    <section id='about' onMouseEnter={() => OnSetActiveHandler('#about')} onMouseLeave={OnSetInActiveHandler}>
       <h5>Get To Know</h5>
       <h2>About Me</h2>
 

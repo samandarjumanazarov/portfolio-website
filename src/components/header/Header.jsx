@@ -4,9 +4,9 @@ import CTA from './CTA'
 import ME from '../../assets/me.jpg'
 import HeaderSocial from './HeaderSocials'
 
-export const Header = () => {
+export const Header = ({ OnSetActiveHandler, OnSetInActiveHandler }) => {
   return (
-    <header>
+    <header onMouseEnter={() => OnSetActiveHandler('#')} onMouseLeave={OnSetInActiveHandler}>
       <div className="contianer header__container">
         <h5>Hello I'm</h5>
         <h1>Samandar Jumanazarov</h1>

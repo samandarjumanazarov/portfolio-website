@@ -8,7 +8,7 @@ import emailjs from 'emailjs-com'
 
 
 
-export default function Contact() {
+export default function Contact({ OnSetActiveHandler, OnSetInActiveHandler }) {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -21,7 +21,7 @@ export default function Contact() {
 
 
   return (
-    <section id='contact'>
+    <section id='contact' onMouseEnter={() => OnSetActiveHandler('#contact')} onMouseLeave={OnSetInActiveHandler}>
       <h5>Get In Touch</h5>
       <h2>Contact Me</h2>
 

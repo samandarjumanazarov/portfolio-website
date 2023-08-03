@@ -9,15 +9,15 @@ import { useState } from 'react'
 
 
 
-export default function Nav({ active, ActiveClickHandler }) {
-  const [activeNav, setActiveNav] = useState('#')
+export default function Nav({ active, activeNav, setActiveNav }) {
+
   return (
     <nav>
-      <a href="#" onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}><AiOutlineHome /></a>
-      <a href="#about" onClick={() => setActiveNav('#about')} className={activeNav === '#about' || active === true ? 'active' : ''}><AiOutlineUser /></a>
-      <a href="#experience" onClick={() => setActiveNav('#experience')} className={activeNav === '#experience' ? 'active' : ''}><BiBook /></a>
-      <a href="#services" onClick={() => setActiveNav('#services')} className={activeNav === '#services' ? 'active' : ''}><RiServiceLine /></a>
-      <a href="#contact" onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''}><BiMessageSquareDetail /></a>
+      <a href="#" onClick={() => setActiveNav('#')} className={activeNav === '#' || active === '#' ? 'active' : ''}><AiOutlineHome /></a>
+      <a href="#about" onClick={() => setActiveNav('#about')} className={activeNav === '#about' || active === '#about' ? 'active' : ''}><AiOutlineUser /></a>
+      <a href="#experience" onClick={() => setActiveNav('#experience')} className={activeNav === '#experience' || active === '#experience' ? 'active' : ''}><BiBook /></a>
+      <a href="#services" onClick={() => setActiveNav('#services')} className={activeNav === '#services' || active === '#services' ? 'active' : ''}><RiServiceLine /></a>
+      <a href="#contact" onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' || active === '#contact' ? 'active' : ''}><BiMessageSquareDetail /></a>
     </nav>
 
   )
